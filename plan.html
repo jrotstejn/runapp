@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>RunApp</title>
+</head>
+<body>
+    <nav>
+        <div class="mobilevisible">
+            <h1>RunApp</h1>
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="hr.html">HR</a></li>
+            <li><a href="plan.html">Plan</a></li>
+        </ul>
+    </nav>
+    <main class="planmain">
+        <section class="plan">
+            <div class="inputs">
+                <label for="goal">Goal: 
+                    <select id="goal">
+                        <option value="performance">Improve Performance</option>
+                        <option value="health">Stay Healthy</option>
+                    </select>
+                </label>
+                <label for="runs"># runs a week:                    
+                    <select id="runs">
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                        <option value="4">Four</option>
+                        <option value="5">Five</option>
+                    </select>
+                </label>
+            </div>
+            <button>Simulate Plan</button>
+        </section>
+        <section class="table">
+            <div class="zoneheader zones planzone">
+                <p>Day</p>
+                <p>Type</p>
+                <p>% of MaxHR</p>
+            </div>
+            <div class="zone1 zones">
+                <p class="day"></p>
+                <p class="type"></p>
+                <p class="maxhr"></p>
+            </div>
+            <div class="zone2 zones">
+                <p class="day"></p>
+                <p class="type"></p>
+                <p class="maxhr"></p>
+            </div>
+            <div class="zone3 zones">
+                <p class="day"></p>
+                <p class="type"></p>
+                <p class="maxhr"></p>
+            </div>
+            <div class="zone4 zones">
+                <p class="day"></p>
+                <p class="type"></p>
+                <p class="maxhr"></p>
+            </div>
+            <div class="zone5 zones">
+                <p class="day"></p>
+                <p class="type"></p>
+                <p class="maxhr"></p>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

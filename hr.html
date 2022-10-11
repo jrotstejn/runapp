@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>RunApp</title>
+</head>
+<body>
+    <nav>
+        <div class="mobilevisible">
+            <h1>RunApp</h1>
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="hr.html">HR</a></li>
+            <li><a href="plan.html">Plan</a></li>
+        </ul>
+    </nav>
+    <main class="heartmain">
+        <section class="hr">
+            <div class="inputs">
+                <label>Age: <input type="text" size="9px"></label>
+                <label>MaxHR: <input type="text" class="maxhr" size="5px" readonly></label>
+            </div>
+            <button>Calculate Max HR</button>
+        </section>
+        <section class="table">
+            <div class="zoneheader zones">
+                <p>Zone</p>
+                <p>Intensity</p>
+                <p>% of MaxHR</p>
+                <p>Pers MaxHR</p>
+            </div>
+            <div class="zone1 zones">
+                <p>Zone 1</p>
+                <p>Very Light</p>
+                <p>50-60%</p>
+                <p class="personalhr"></p>
+            </div>
+            <div class="zone2 zones">
+                <p>Zone 2</p>
+                <p>Light</p>
+                <p>60-70%</p>
+                <p class="personalhr"></p>
+            </div>
+            <div class="zone3 zones">
+                <p>Zone 3</p>
+                <p>Moderate</p>
+                <p>70-80%</p>
+                <p class="personalhr"></p>
+            </div>
+            <div class="zone4 zones">
+                <p>Zone 4</p>
+                <p>Hard</p>
+                <p>80-90%</p>
+                <p class="personalhr"></p>
+            </div>
+            <div class="zone5 zones">
+                <p>Zone 5</p>
+                <p>Maximum</p>
+                <p>90-100%</p>
+                <p class="personalhr"></p>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
