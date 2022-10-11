@@ -6,7 +6,6 @@ menu.addEventListener("click", () =>
     document.querySelector("ul").classList.toggle('visible')
 );
 
-
 // Calculating speed, distance or duration
 
 

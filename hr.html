@@ -25,13 +25,22 @@
         </ul>
     </nav>
     <main class="heartmain">
-        <section class="hr">
-            <div class="inputs">
-                <label>Age: <input type="text" size="9px"></label>
-                <label>MaxHR: <input type="text" class="maxhr" size="5px" readonly></label>
-            </div>
-            <button>Calculate Max HR</button>
-        </section>
+        <form action="">
+            <section class="hr">
+            
+                <div class="inputs">
+                      <div>
+                          <label>Age:</label>
+                          <input class="age" type="number" step:"1" min="1" max="115" required>
+                      </div>
+                      <div>
+                         <label>MaxHR:</label>
+                          <input type="number" class="maxhr" readonly>
+                      </div>
+                </div>
+            <button class="calculatehr">Calculate Max HR</button>
+            </section>
+        </form>
         <section class="table">
             <div class="zoneheader zones">
                 <p>Zone</p>
@@ -71,6 +80,6 @@
             </div>
         </section>
     </main>
-    <script src="app.js"></script>
+    <script src="hr.js"></script>
 </body>
 </html>
