@@ -74,7 +74,7 @@ main {
 }
 
 .plansection {
-  padding-bottom: 4%;
+  padding-bottom: 7%;
 }
 
 ul {
@@ -285,7 +285,7 @@ select {
   background-color: rgb(79, 106, 206);
 }
 
-.table .zones {
+.zones {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   border: 1px solid black;
@@ -293,6 +293,10 @@ select {
 
 .planmain .table .zones {
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.invisible {
+  display: none;
 }
 
 @media(min-width: 768px){
@@ -303,6 +307,8 @@ select {
   .sections p {
     font-size: 1.5rem;
   }
+
+
 }
 
 @media(min-width: 992px){
