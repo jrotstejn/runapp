@@ -3,10 +3,9 @@ body {
   color:rgb(82, 70, 18);
   font-style: oblique;
   margin: 0;
-  height: 100vh;
 }
 
-nav {
+.navbar {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -14,10 +13,9 @@ nav {
   position: sticky;
   top: 0;
   height: 60px;
-  margin-bottom: 3%;
 }
 
-.mobilevisible {
+.mainnav {
   background-color:rgb(79, 106, 206);
   display: flex;
   flex: 1;
@@ -28,7 +26,7 @@ nav {
 
 h1 {
   margin: 0;
-  padding-left: 5%;
+  padding-left: 8%;
   font-size: 2rem;
 }
 
@@ -75,7 +73,7 @@ span {
 
 
 main {
-  padding: 0 6%;
+  padding: 40px 6% 0;
   height: 100%;
 }
 
@@ -120,7 +118,7 @@ main img {
 }
 
 .sections p {
-  margin: 50px 0 30px 0;
+  margin: 30px 0;
   padding: 0 30px;
   font-size: 1.2rem;
   text-align: center;
@@ -128,14 +126,8 @@ main img {
   border-top: 2px solid black;
 }
 
-.performance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .performance p {
-  border: none;
+  border-top: none;
   padding-top: 0;
 }
 
@@ -187,7 +179,6 @@ input {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 40px;
 }
 
 .calcperformance img {
@@ -229,14 +220,14 @@ button:hover {
   color:rgb(82, 70, 18);
 }
 
-.heartmain, .planmain {
+.subpagesmain {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding-top: 40px;
+  height: calc(100vh - 175px);
 }
 
-.heartmain label, .planmain label {
+.subpagesmain label {
   font-weight: 800;
 }
 
@@ -301,7 +292,7 @@ label, .table {
   border: 1px solid black;
 }
 
-.planmain .table .zones {
+.planzone {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -309,9 +300,13 @@ label, .table {
   display: none;
 }
 
+footer {
+  text-align: center;
+}
+
 @media(min-width: 768px){
   main {
-    padding: 0 19%;
+    padding: 40px 19% 0;
   }
 
   .sections img {
@@ -327,7 +322,7 @@ label, .table {
 
 @media(min-width: 992px){
 
-  nav {
+  .navbar {
     height: 80px;
     flex-direction: row;
     align-items: center;
@@ -345,12 +340,16 @@ label, .table {
     align-self: center;
   }
 
-  .mobilevisible {
+  .mainnav {
     justify-content: center;
   }
 
   .menu {
     display: none;
+  }
+
+  h1 {
+    padding-left: 0;
   }
 
   ul {
@@ -409,14 +408,14 @@ label, .table {
   }
 
   label {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
   }
 
   select {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
   }
 
   .table {
-    font-size: 1.4vw;
+    font-size: 1.3vw;
   }
 }
