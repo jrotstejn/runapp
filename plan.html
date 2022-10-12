@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <title>RunApp</title>
 </head>
+
 <body>
     <nav>
         <div class="mobilevisible">
-            <h1>RunApp</h1>
+            <a href="index.html">
+                <h1>RunApp</h1>
+            </a>
             <div class="menu">
                 <span></span>
                 <span></span>
@@ -27,13 +31,15 @@
     <main class="planmain">
         <section class="plan">
             <div class="inputs">
-                <label for="goal">Goal: 
+                <div>
+                    <label for="goal">Goal:</label>
                     <select id="goal">
-                        <option value="performance">Improve Performance</option>
-                        <option value="health">Stay Healthy</option>
+                        <option value="performance">Performance</option>
+                        <option value="health">Health</option>
                     </select>
-                </label>
-                <label for="runs"># runs a week:                    
+                </div>
+                <div>
+                    <label for="runs">#Runs/Week:</label>
                     <select id="runs">
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -41,7 +47,7 @@
                         <option value="4">Four</option>
                         <option value="5">Five</option>
                     </select>
-                </label>
+                </div>
             </div>
             <button class="simulateplan">Simulate Plan</button>
         </section>
@@ -80,4 +86,5 @@
     </main>
     <script src="plan.js"></script>
 </body>
+
 </html>

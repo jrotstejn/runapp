@@ -2,9 +2,17 @@
 // Gives the mobile version a expandable menu sidebar when being clicked
 
 const menu = document.querySelector(".menu");
+const main = document.querySelector("main");
+
 menu.addEventListener("click", () =>
     document.querySelector("ul").classList.toggle('visible')
 );
+
+main.addEventListener("click", () =>
+document.querySelector("ul").classList.remove('visible')
+);
+
+
 
 // calculating max hr and the personal hrs of each heart rate zone
 

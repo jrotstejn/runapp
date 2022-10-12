@@ -3,6 +3,7 @@ body {
   color:rgb(82, 70, 18);
   font-style: oblique;
   margin: 0;
+  height: 100vh;
 }
 
 nav {
@@ -27,8 +28,12 @@ nav {
 
 h1 {
   margin: 0;
-  padding-left: 2%;
+  padding-left: 5%;
   font-size: 2rem;
+}
+
+h1:hover {
+  cursor: pointer;
 }
 
 .visible {
@@ -36,7 +41,7 @@ h1 {
 }
 
 .disabled {
-  background-color: darkgray;
+  background-color: rgb(196, 196, 238);
   pointer-events: none;
   user-select: none;
 }
@@ -55,11 +60,11 @@ h1 {
   cursor: pointer;
 }
 
-nav a {
+ul a {
   transition: 250ms;
 }
 
-nav a:hover {
+ul a:hover {
   color: rgb(79, 106, 206);
 }
 
@@ -70,7 +75,8 @@ span {
 
 
 main {
-  padding: 0 10%;
+  padding: 0 6%;
+  height: 100%;
 }
 
 .plansection {
@@ -91,7 +97,7 @@ ul {
     flex-direction: column;
     align-self: end;
     align-items: end;
-    background-color:rgba(221, 221, 239, 0.686);
+    background-color:rgba(196, 196, 238, 0.94);
     padding: 3%;
     border-radius: 5%;
     gap: 10px;
@@ -125,6 +131,7 @@ main img {
 .performance {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .performance p {
@@ -136,6 +143,7 @@ main img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  padding: 0 4%;
 }
 
 .valuegroup {
@@ -154,7 +162,7 @@ input {
   text-align: right;
   flex: 1;
   font-size: 4vw;
-  width: 80%;
+  width: 100%;
 }
 
 .inputgroup {
@@ -167,7 +175,6 @@ input {
   padding: 0;
   width: 20%;
   max-width: 20%;
-  background-color:rgb(79, 106, 206);
 }
 
 .valuegroup .inputgroup2 p {
@@ -179,7 +186,7 @@ input {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   padding-top: 40px;
 }
 
@@ -210,6 +217,7 @@ button {
   font-weight: 700;
   transition: 250ms;
   flex: 1;
+  background-color: #d6d7dd;
 }
 
 button:hover {
@@ -217,13 +225,14 @@ button:hover {
 }
 
 .active {
-  background-color: darkgrey;
+  background-color: rgb(79, 106, 206);
+  color:rgb(82, 70, 18);
 }
 
 .heartmain, .planmain {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
   padding-top: 40px;
 }
 
@@ -239,23 +248,28 @@ button:hover {
 
 .hr .inputs, .plan .inputs {
   display: grid;
-  grid-template-columns: 5fr 4fr;
+  grid-template-columns: 6fr 4fr;
   justify-items: center;
 }
 
-.hr label {
-  width: 80%;
+.hr label, .plan label {
+  width: 100%;
 }
 
-.hr input {
+.hr input, .plan select {
   text-align: center;
 }
 
-.hr .inputs div {
+.hr .inputs div, .plan .inputs div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
+  width: 75%;
+}
+
+select {
+  width: 100%;
+  font-size: 4vw;
 }
 
 .maxhr {
@@ -269,10 +283,6 @@ button:hover {
 
 label, .table {
   font-size: 3.5vw;
-}
-
-select {
-  font-size: 3vw;
 }
 
 .zones {
@@ -300,6 +310,10 @@ select {
 }
 
 @media(min-width: 768px){
+  main {
+    padding: 0 19%;
+  }
+
   .sections img {
     border-radius: 5%;
     width: 65%;
@@ -339,11 +353,11 @@ select {
     display: none;
   }
 
-  a {
+  ul {
     transition: 250ms;
   }
 
-  nav a:hover {
+  ul a:hover {
     color: rgb(221, 221, 239);
     cursor: pointer;
   }
@@ -393,30 +407,16 @@ select {
   button, input, .values p {
     font-size: 1.3vw;
   }
-  
-  .calcperformance {
-    padding-left: 13%;
-    padding-right: 13%;
-  }
-
-  .hr, .table, .plan {
-    padding-left: 13%;
-    padding-right: 13%;
-  }
 
   label {
     font-size: 1.5vw;
   }
 
   select {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
   }
 
   .table {
-    font-size: 1.2vw;
-  }
-
-  .plan .inputs {
-    padding: 0 20%;
+    font-size: 1.4vw;
   }
 }
