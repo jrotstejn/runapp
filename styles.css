@@ -1,61 +1,97 @@
-body {
-  background-color:rgb(221, 221, 239);
-  color:rgb(82, 70, 18);
-  font-style: oblique;
-  margin: 0;
+:root {
+  --navcolor: rgb(79, 106, 206);
+  --bodycolor: rgb(221, 221, 239);
+  --fontcolor: rgb(82, 70, 18);
+  --buttoncolor: rgb(214, 215, 221);
+  --accentcolor: rgb(196, 196, 238);
+  --mobilenavcolor: rgba(196, 196, 238, 0.94);
+  --bordercolor: rgb(4, 5, 37);
 }
 
+/* body */
+
+body {
+  background-color: var(--bodycolor);
+  color: var(--fontcolor);
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* navbar */
+
 .navbar {
-  list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: sticky;
   top: 0;
-  height: 60px;
+  height: 10vh;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--fontcolor);
 }
 
 .mainnav {
-  background-color:rgb(79, 106, 206);
+  background-color: var(--navcolor);
   display: flex;
   flex: 1;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
-h1 {
+.mainnav h1 {
   margin: 0;
   padding-left: 8%;
-  font-size: 2rem;
+  font-size: 7vw;
 }
 
-h1:hover {
+.mainnav h1:hover {
   cursor: pointer;
 }
 
-.visible {
-  display: flex;
-}
-
-.disabled {
-  background-color: rgb(196, 196, 238);
-  pointer-events: none;
-  user-select: none;
-}
-
-.menu {
+.mainnav .menu {
   padding-right: 3%;
-  width: 30px;
-  height: 21px;
+  width: 8%;
+  height: 2.9vh;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.5vh;
   transition: 250ms;
 }
 
-.menu:hover {
+.mainnav .menu:hover {
   cursor: pointer;
+}
+
+.mainnav .menu span {
+  flex: 1;
+  background-color: var(--fontcolor);
+}
+
+ul {
+  display: none;
+  position: absolute;
+  top: 10vh;
+  justify-content: space-evenly;
+  flex: 1;
+  list-style: none;
+  font-size: 4.7vw;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  flex-direction: column;
+  align-self: end;
+  align-items: end;
+  background-color: var(--mobilenavcolor);
+  padding: 3%;
+  border-radius: 5%;
+  gap: 2vh;
+}
+
+.visible {
+  /* a class that only gets toggled when you press the menu button in the mobile version */
+  display: flex;
 }
 
 ul a {
@@ -63,48 +99,16 @@ ul a {
 }
 
 ul a:hover {
-  color: rgb(79, 106, 206);
+  color: var(--navcolor);
 }
 
-span {
-    flex: 1;
-    background-color: rgb(82, 70, 18);
-}
-
+/* main content (global) */
 
 main {
-  padding: 40px 6% 0;
-  height: 100%;
+  padding: 8vh 6% 0;
 }
 
-.plansection {
-  padding-bottom: 7%;
-}
-
-ul {
-    display: none;
-    position: absolute;
-    top: 60px;
-    justify-content: space-evenly;
-    flex: 1;
-    list-style: none;
-    font-size: 1.1rem;
-    padding: 0;
-    font-weight: 700;
-    margin: 0;
-    flex-direction: column;
-    align-self: end;
-    align-items: end;
-    background-color:rgba(196, 196, 238, 0.94);
-    padding: 3%;
-    border-radius: 5%;
-    gap: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: rgb(82, 70, 18);
-}
+/* main content (homepage) */
 
 .sections {
   display: flex;
@@ -112,35 +116,135 @@ a {
   align-items: center;
 }
 
-main img {
+.sections p {
+  padding: 0 11%;
+  font-size: 4.5vw;
+  text-align: center;
+  padding-top: 5vh;
+  border-top: 0.25vh solid var(--bordercolor);
+}
+
+.sections.performancesection p {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.sections p a {
+  color: var(--navcolor);
+  text-decoration: underline;
+  font-size: 4.4vw;
+  font-weight: 700;
+}
+
+.sections p a:hover {
+  color: var(--fontcolor);
+}
+
+img {
   border-radius: 5%;
   width: 75%;
 }
 
-.sections p {
-  margin: 30px 0;
-  padding: 0 30px;
-  font-size: 1.2rem;
-  text-align: center;
-  padding-top: 33px;
-  border-top: 2px solid black;
+.arrow {
+  /* arrow that lets your scroll through the sections, only visible in the non-mobile version */
+  display: none;
 }
 
-.performance p {
-  border-top: none;
-  padding-top: 0;
+/* main content (subpages) */
+
+input {
+  text-align: right;
+  flex: 1;
+  font-size: 4vw;
+  width: 100%;
+}
+
+input,
+select {
+  text-align: center;
+}
+
+.inputs {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  justify-items: center;
+  padding-bottom: 3vh;
+}
+
+.inputs div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+
+button {
+  font-size: 4vw;
+  padding: 2% 3%;
+  font-weight: 700;
+  transition: 250ms;
+  background-color: var(--buttoncolor);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.calculatehr,
+button.simulateplan {
+  width: 100%;
+}
+
+/* table (only hr and plan page) : used grid for for responsive modern table instead of the dated table approach */
+
+label,
+.table {
+  font-size: 3.8vw;
+}
+
+.table {
+  padding-top: 3vh;
+}
+
+.zones {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  border: 0.125vh solid var(--bordercolor);
+  text-align: center;
+  background-color: var(--accentcolor);
+}
+
+.table .zoneheader {
+  font-weight: 900;
+  background-color: var(--navcolor);
+}
+
+/* main content (performance page) */
+
+.performancemain {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  flex: 1;
+}
+
+.active {
+  /* a class that shows which button is active */
+  background-color: var(--navcolor);
+  color: var(--fontcolor);
 }
 
 .values {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
   padding: 0 4%;
-}
-
-.valuegroup {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
 }
 
 .values p {
@@ -150,113 +254,26 @@ main img {
   font-weight: 700;
 }
 
-input {
-  text-align: right;
-  flex: 1;
-  font-size: 4vw;
-  width: 100%;
+.valuegroup {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-top: 2.5vh;
 }
 
 .inputgroup {
   display: flex;
-  gap: 4px;
+  gap: 1%;
   width: 100%;
 }
 
-.valuegroup .inputgroup p {
-  padding: 0;
-  width: 20%;
-  max-width: 20%;
+.disabled {
+  /* a class that disable the input field of the value you want to calculate */
+  background-color: var(--accentcolor);
+  pointer-events: none;
+  user-select: none;
 }
 
-.valuegroup .inputgroup2 p {
-  max-width: 10%;
-}
-
-
-.calcperformance {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.calcperformance img {
-  align-self: center;
-}
-
-.sections p a {
-  color:rgb(79, 106, 206);
-  text-decoration:underline;
-  font-style:italic;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.buttons {
-  display:flex;
-  gap: 5px;
-}
-
-.buttons {
-  flex: 1;
-}
-
-button {
-  font-size: 4vw;
-  padding: 2% 3%;
-  font-weight: 700;
-  transition: 250ms;
-  flex: 1;
-  background-color: #d6d7dd;
-}
-
-button:hover {
-  cursor: pointer;
-}
-
-.active {
-  background-color: rgb(79, 106, 206);
-  color:rgb(82, 70, 18);
-}
-
-.subpagesmain {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height: calc(100vh - 175px);
-}
-
-.subpagesmain label {
-  font-weight: 800;
-}
-
-.hr, .plan {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.hr .inputs, .plan .inputs {
-  display: grid;
-  grid-template-columns: 6fr 4fr;
-  justify-items: center;
-}
-
-.hr label, .plan label {
-  width: 100%;
-}
-
-.hr input, .plan select {
-  text-align: center;
-}
-
-.hr .inputs div, .plan .inputs div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 75%;
-}
+/* main content (heart rate page) */
 
 select {
   width: 100%;
@@ -264,130 +281,127 @@ select {
 }
 
 .maxhr {
-  background-color: rgb(196, 196, 238);
+  background-color: var(--accentcolor);
   pointer-events: none;
 }
 
 .personalhr {
-  font-weight: 600;
+  font-weight: 700;
 }
 
-label, .table {
-  font-size: 3.5vw;
-}
-
-.zones {
-  text-align: center;
-  background-color: rgb(196, 196, 238);
-}
-
-.table .zoneheader {
-  font-weight: 900;
-  background-color: rgb(79, 106, 206);
-}
-
-.zones {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 1px solid black;
-}
+/* main content (plan page) */
 
 .planzone {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.invisible {
+.invisible { 
+  /* a class that makes the unused rows invibisle when simulating the plan */
   display: none;
 }
 
+/* footer */
+
 footer {
   text-align: center;
+  font-size: 4vw;
 }
 
-@media(min-width: 768px){
-  main {
-    padding: 40px 19% 0;
-  }
-
-  .sections img {
-    border-radius: 5%;
-    width: 65%;
-  }
-  .sections p {
-    font-size: 1.5rem;
-  }
-
-
+footer p {
+  margin: 0;
+  padding: 1.5vh 0 0.8vh 0;
 }
 
-@media(min-width: 992px){
+
+@media(min-width: 992px) {
+
+  /* navbar */
 
   .navbar {
-    height: 80px;
     flex-direction: row;
-    align-items: center;
-    background-color: rgb(79, 106, 206);
-  }
-
-  ul {
-    font-size: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    position:relative;
-    top: 0;
-    background-color: rgb(79, 106, 206);
-    padding: 0;
-    align-self: center;
+    background-color: var(--navcolor);
   }
 
   .mainnav {
     justify-content: center;
   }
 
-  .menu {
+  .mainnav .menu {
     display: none;
   }
 
-  h1 {
+  .mainnav h1 {
     padding-left: 0;
+    font-size: 3vw
   }
 
   ul {
+    font-size: 2.1vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 0;
+    background-color: var(--navcolor);
+    padding: 0;
+    align-self: center;
     transition: 250ms;
   }
 
   ul a:hover {
-    color: rgb(221, 221, 239);
+    color: var(--bodycolor);
     cursor: pointer;
   }
 
-  .sections p a {
-    font-size: 2rem;
+  /* main content (global) */
+
+  main {
+    padding: 10vh 19% 0;
   }
 
-  p a:hover {
-    color: rgb(82, 70, 18);
-  }
+  /* main content (homepage) */
 
   .sections {
     flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 4%;
+    display: none;
   }
 
   .sections p {
-    padding-top: 0px;
+    padding-top: 0;
     border-top: 0;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 10%;
-    font-size: 2rem;
+    font-size: 2vw;
     width: 50%;
   }
 
-  .sections img {
+  .sections p a {
+    font-size: 1.8vw;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: center;
+    transition: 700ms;
+    padding: 5vh 0;
+    color: var(--navcolor);
+    margin: 0 43%;
+  }
+
+  .arrow:hover {
+    color: var(--fontcolor);
+    cursor: pointer;
+    transform: translateY(5px);
+  }
+
+  .visiblesection {
+    /* class that toggles and let your scroll throught the sections on the non-mobile homepage, other sections are invisible */
+    display: flex;
+  }
+
+  img {
     width: 40%;
   }
 
@@ -399,23 +413,22 @@ footer {
     order: 2;
   }
 
-  .plansection {
-    padding-bottom: 0%;
-  }
-  
-  button, input, .values p {
-    font-size: 1.3vw;
-  }
+  /* adjusting font sizes in non-mobile display */
 
-  label {
-    font-size: 1.4vw;
-  }
-
-  select {
+  button,
+  input,
+  label,
+  select,
+  .values p {
     font-size: 1.4vw;
   }
 
   .table {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
   }
+
+  footer {
+    font-size: 1.7vw;
+  }
+
 }

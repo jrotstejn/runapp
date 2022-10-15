@@ -3,15 +3,15 @@
 
 const menu = document.querySelector(".menu");
 const main = document.querySelector("main");
+const ul = document.querySelector("ul");
 
 menu.addEventListener("click", () =>
-    document.querySelector("ul").classList.toggle('visible')
+    ul.classList.toggle('visible')
 );
 
 main.addEventListener("click", () =>
-document.querySelector("ul").classList.remove('visible')
+    ul.classList.remove('visible')
 );
-
 
 // simulating the right plan for the chosen goal
 

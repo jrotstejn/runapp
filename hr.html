@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>RunApp</title>
 </head>
+
 <body>
     <nav class="navbar">
         <nav class="mainnav">
-            <a href="index.html"><h1>RunApp</h1></a>
+            <a href="index.html">
+                <h1>RunApp</h1>
+            </a>
             <div class="menu">
                 <span></span>
                 <span></span>
@@ -24,29 +31,26 @@
             <li><a href="plan.html">Plan</a></li>
         </ul>
     </nav>
-    <main class="subpagesmain">
+    <main>
         <form action="">
-            <section class="hr">
-            
-                <div class="inputs">
-                      <div>
-                          <label>Age:</label>
-                          <input class="age" type="number" step:"1" min="1" max="115" required>
-                      </div>
-                      <div>
-                         <label>MaxHR:</label>
-                          <input type="number" class="maxhr" readonly>
-                      </div>
-                </div>
-            <button class="calculatehr">Calculate Max HR</button>
-            </section>
+                <section class="inputs">
+                    <div>
+                        <label>Age:</label>
+                        <input class="age" type="number" step:"1" min="1" max="115" required>
+                    </div>
+                    <div>
+                        <label>MaxHR:</label>
+                        <input type="number" class="maxhr" readonly>
+                    </div>
+                </section>
+                <button class="calculatehr">Calculate Max HR</button>
         </form>
         <section class="table">
             <div class="zoneheader zones">
                 <p>Zone</p>
                 <p>Intensity</p>
                 <p>%MaxHR</p>
-                <p>Pers MaxHR</p>
+                <p>MaxHR</p>
             </div>
             <div class="zone1 zones">
                 <p>Zone 1</p>
@@ -85,4 +89,5 @@
     </footer>
     <script src="hr.js"></script>
 </body>
+
 </html>

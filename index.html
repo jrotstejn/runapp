@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>RunApp</title>
 </head>
+
 <body>
     <nav class="navbar">
         <nav class="mainnav">
-            <a href="index.html"><h1>RunApp</h1></a>
+            <a href="index.html">
+                <h1>RunApp</h1>
+            </a>
             <div class="menu">
                 <span></span>
                 <span></span>
@@ -25,31 +32,38 @@
         </ul>
     </nav>
     <main>
-        <section class="performance sections">
+        <section class="sections performancesection visiblesection">
             <p>Calculate your speed,distance or duration. All values are interchangeable
                 <br><br>
                 <a href="performance.html">Calculate here</a>
             </p>
             <img src="performance.jpg" alt="a shoe">
         </section>
-        <section class="hrsection sections">
-            <p>Calculate your heart rate and find out what the different Heart Rate Zones mean for your running training.
+        <section class="sections hrsection">
+            <p>Calculate your heart rate and find out what the different Heart Rate Zones mean for your running
+                training.
                 <br><br>
                 <a href="hr.html">Calculate here</a>
             </p>
             <img src="heart.jpg" alt="a heart">
         </section>
-        <section class="plansection sections">
-             <p>Let us simulate a sample training plan for you according to your goal and time you want to invest in running. 
-            Remember: small efforts are still better than no efforts!
-            <br><br>
-            <a href="plan.html">Make my plan</a></p>
+        <section class="sections plansection">
+            <p>Let us simulate a sample training plan for you according to your goal and time you want to invest in
+                running.
+                <br><br>
+                <a href="plan.html">Make my plan</a>
+            </p>
             <img src="plan.jpg" alt="a plan">
         </section>
+        <div class="arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+              </svg>
+        </div>
     </main>
     <footer>
         <p>&copy; jrotstejn</p>
     </footer>
-    <script src="hr.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
