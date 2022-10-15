@@ -223,7 +223,7 @@ label,
 /* main content (performance page) */
 
 .performancemain {
-  height: 75vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   gap: 3vh;
