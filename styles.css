@@ -1,10 +1,10 @@
 :root {
   --navcolor: #1d3557;
-  --bodycolor: #7fb7bb;
-  --fontcolor: #bb2b37;
+  --bodycolor: #afc9cb;
+  --fontcolor: #b12934;
   --buttoncolor: #c3c8c2;
-  --accentcolor: #457b9d;
-  --mobilenavcolor: #457b9dd4;
+  --accentcolor: #5a90b2;
+  --mobilenavcolor: #5a90b2e4;
 }
 
 /* body */
