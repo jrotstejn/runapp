@@ -24,6 +24,7 @@ body {
   position: sticky;
   top: 0;
   height: 10vh;
+  user-select: none;
 }
 
 .navbar a {
