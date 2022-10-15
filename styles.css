@@ -1,11 +1,10 @@
 :root {
-  --navcolor: rgb(79, 106, 206);
-  --bodycolor: rgb(221, 221, 239);
-  --fontcolor: rgb(82, 70, 18);
-  --buttoncolor: rgb(214, 215, 221);
-  --accentcolor: rgb(196, 196, 238);
-  --mobilenavcolor: rgba(196, 196, 238, 0.94);
-  --bordercolor: rgb(4, 5, 37);
+  --navcolor: #1d3557;
+  --bodycolor: #7fb7bb;
+  --fontcolor: #e63946;
+  --buttoncolor: #c3c8c2;
+  --accentcolor: #457b9d;
+  --mobilenavcolor: #457b9dd4;
 }
 
 /* body */
@@ -122,7 +121,7 @@ main {
   font-size: 4.5vw;
   text-align: center;
   padding-top: 5vh;
-  border-top: 0.25vh solid var(--bordercolor);
+  border-top: 0.25vh solid var(--navcolor);
 }
 
 .sections.performancesection p {
@@ -211,14 +210,22 @@ label,
 .zones {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  border: 0.125vh solid var(--bordercolor);
+  border: 0.125vh solid var(--navcolor);
   text-align: center;
   background-color: var(--accentcolor);
+  color: var(--navcolor);
+  font-weight: 600;
+}
+
+.personalhr {
+  font-weight: 900;
+  font-style: oblique;
 }
 
 .table .zoneheader {
   font-weight: 900;
   background-color: var(--navcolor);
+  color: var(--fontcolor);
 }
 
 /* main content (performance page) */
@@ -286,10 +293,6 @@ select {
   pointer-events: none;
 }
 
-.personalhr {
-  font-weight: 700;
-}
-
 /* main content (plan page) */
 
 .planzone {
@@ -306,6 +309,7 @@ select {
 footer {
   text-align: center;
   font-size: 4vw;
+  user-select: none;
 }
 
 footer p {
