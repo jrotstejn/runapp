@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,10 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>RunApp</title>
 </head>
+
 <body>
     <nav class="navbar">
         <nav class="mainnav">
-            <a href="index.html"><h1>RunApp</h1></a>
+            <a href="index.html">
+                <h1>RunApp</h1>
+            </a>
             <div class="menu">
                 <span></span>
                 <span></span>
@@ -22,47 +26,51 @@
         </nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="performance.html">Performance</a></li>
+            <li><a class="currentpage" href="performance.html">Performance</a></li>
             <li><a href="hr.html">HR</a></li>
             <li><a href="plan.html">Plan</a></li>
         </ul>
     </nav>
     <main class="performancemain">
-                <div class="buttons">
-                    <button class="active speed">Speed</button><button class="duration">Duration</button><button class="distance">Distance</button>
-                </div>
-                <div class="values">
-                    <div class="valuegroup">
-                        <p class="distance">Distance</p>
-                        <div class="inputgroup">
-                        <input type="number" class="distanceInput" min="0" step="0.01">
+        <div class="buttons">
+            <button class="active speed">Speed</button><button class="duration">Duration</button><button
+                class="distance">Distance</button>
+        </div>
+        <form class="valuesForm">
+            <div class="values">
+                <div class="valuegroup">
+                    <p class="distance">Distance</p>
+                    <div class="inputgroup">
+                        <input type="number" class="distanceInput" min="0" step="0.01" required>
                         <p>km</p>
-                        </div>
-                    </div>
-                    <div class="valuegroup">
-                        <p class="duration">Duration</p>
-                        <div class="inputgroup">
-                                <input id="hours" type="number" class="durationInput" min="0" step="1">
-                                <p>h</p>
-                                <input id="minutes" type="number" class="durationInput" min="0" max="59" step="1">
-                                <p>m</p>
-                                <input id="seconds" type="number" class="durationInput" min="0" max="59" step="1">   
-                                <p>s</p>
-                        </div>
-                    </div>
-                    <div class="valuegroup">
-                        <p class="speed">Speed</p>
-                        <div class="inputgroup">
-                        <input type="number" class="speedInput disabled"  min="0" step="0.01">
-                        <p>km/h</p> 
-                        </div>
                     </div>
                 </div>
+                <div class="valuegroup">
+                    <p class="duration">Duration</p>
+                    <div class="inputgroup">
+                        <input id="hours" type="number" class="durationInput" min="0" step="1">
+                        <p>h</p>
+                        <input id="minutes" type="number" class="durationInput" min="0" max="59" step="1" required>
+                        <p>m</p>
+                        <input id="seconds" type="number" class="durationInput" min="0" max="59" step="1">
+                        <p>s</p>
+                    </div>
+                </div>
+                <div class="valuegroup">
+                    <p class="speed">Speed</p>
+                    <div class="inputgroup">
+                        <input type="number" class="speedInput disabled" min="0" step="0.01">
+                        <p>km/h</p>
+                    </div>
+                </div>
+            </div>
             <button class="calculate">Calculate</button>
+        </form>
     </main>
     <footer>
         <p>&copy; jrotstejn</p>
     </footer>
     <script src="performance.js"></script>
 </body>
+
 </html>

@@ -1,16 +1,15 @@
 :root {
   --navcolor: #1d3557;
-  --bodycolor: #afc9cb;
-  --fontcolor: #b12934;
-  --buttoncolor: #c3c8c2;
+  --fontcolor: #afc9cb;
+  --buttoncolor: #afc9cb;
   --accentcolor: #5a90b2;
-  --mobilenavcolor: #5a90b2e4;
+  --mobilenavcolor: #23668ff6;
 }
 
 /* body */
 
 body {
-  background-color: var(--bodycolor);
+  background-image: url("./background.jpg");
   color: var(--fontcolor);
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -115,6 +114,9 @@ main {
   flex-direction: column;
   align-items: center;
   user-select: none;
+  background-color: var(--fontcolor);
+  border-radius: 2%;
+  color: var(--navcolor);
 }
 
 .sections p {
@@ -128,23 +130,24 @@ main {
 .sections.performancesection p {
   border-top: none;
   padding-top: 0;
-  margin-top: 0;
+  margin-top: 3%;
 }
 
 .sections p a {
   color: var(--navcolor);
-  text-decoration: underline;
   font-size: 4.4vw;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .sections p a:hover {
-  color: var(--fontcolor);
+  text-decoration: underline;
 }
 
 img {
   border-radius: 5%;
   width: 75%;
+  margin: 3%;
 }
 
 .arrow {
@@ -170,7 +173,11 @@ select {
   display: grid;
   grid-template-columns: 6fr 4fr;
   justify-items: center;
-  padding-bottom: 3vh;
+  padding: 1.5vh 0;
+  margin-bottom: 1.5vh;
+  color: var(--navcolor);
+  background-color: var(--fontcolor);
+  border: var(--navcolor) solid 2px;
 }
 
 .inputs div {
@@ -184,12 +191,15 @@ button {
   font-size: 4vw;
   padding: 2% 3%;
   font-weight: 700;
-  transition: 250ms;
+  transition: 450ms;
   background-color: var(--buttoncolor);
+  color: var(--navcolor);
 }
 
 button:hover {
   cursor: pointer;
+  background-color: var(--navcolor);
+  color: var(--fontcolor);
 }
 
 button.calculatehr,
@@ -198,6 +208,10 @@ button.simulateplan {
 }
 
 /* table (only hr and plan page) : used grid for for responsive modern table instead of the dated table approach */
+
+label {
+  font-weight: 900;
+}
 
 label,
 .table {
@@ -252,8 +266,17 @@ label,
   color: var(--fontcolor);
 }
 
+.valuesForm {
+  display: flex;
+  gap: 3vh;
+  flex-direction: column;
+}
+
 .values {
   padding: 0 4%;
+  background-color: var(--fontcolor);
+  padding-bottom: 2.5vh;
+  border: var(--navcolor) solid 2px;
 }
 
 .values p {
@@ -261,6 +284,7 @@ label,
   margin: 0;
   font-size: 4vw;
   font-weight: 700;
+  color: var(--navcolor);
 }
 
 .valuegroup {
@@ -350,12 +374,18 @@ footer p {
     background-color: var(--navcolor);
     padding: 0;
     align-self: center;
-    transition: 250ms;
+  }
+
+  ul li .currentpage {
+    color: rgb(251, 252, 255);
+    cursor: pointer;
+    text-decoration: underline;
   }
 
   ul a:hover {
-    color: var(--bodycolor);
+    color: rgb(251, 252, 255);
     cursor: pointer;
+    text-decoration: underline;
   }
 
   /* main content (global) */
@@ -408,7 +438,9 @@ footer p {
   }
 
   img {
-    width: 40%;
+    width: 35%;
+    border-radius: 15%;
+    border: var(--navcolor) solid 1px;
   }
 
   .hrsection img {

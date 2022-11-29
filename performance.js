@@ -66,7 +66,7 @@ const buttonSpeed = {
     button3: document.querySelector(".duration"),
     input1: document.querySelectorAll(".speedInput"),
     input2: document.querySelectorAll(".distanceInput"),
-    input3: document.querySelectorAll(".durationInput")
+    input3: document.querySelectorAll(".durationInput"),
 }
 
 const buttonDuration = {
@@ -75,7 +75,7 @@ const buttonDuration = {
     button3: document.querySelector(".distance"),
     input1: document.querySelectorAll(".durationInput"),
     input2: document.querySelectorAll(".speedInput"),
-    input3: document.querySelectorAll(".distanceInput")
+    input3: document.querySelectorAll(".distanceInput"),
 }
 
 const buttonDistance = {
@@ -84,7 +84,7 @@ const buttonDistance = {
     button3: document.querySelector(".speed"),
     input1: document.querySelectorAll(".distanceInput"),
     input2: document.querySelectorAll(".durationInput"),
-    input3: document.querySelectorAll(".speedInput")
+    input3: document.querySelectorAll(".speedInput"),
 }
 
 
@@ -121,11 +121,18 @@ const toggleButton = function(clickedButton) {
     }  
 };
 
+document.querySelector(".valuesForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+})
+
 buttonDistance.button1.addEventListener("click", () => {
     toggleButton(buttonDistance);
     calculateButton.removeEventListener("click", speedCalc);
     calculateButton.removeEventListener("click", durationCalc);
     calculateButton.addEventListener("click", distanceCalc);
+    minutes.setAttribute("required", "");
+    speed.setAttribute("required", "");
+    distance.removeAttribute("required"); 
 })
 
 buttonDuration.button1.addEventListener("click", () => {
@@ -133,6 +140,9 @@ buttonDuration.button1.addEventListener("click", () => {
     calculateButton.removeEventListener("click", speedCalc);
     calculateButton.addEventListener("click", durationCalc);
     calculateButton.removeEventListener("click", distanceCalc);
+    minutes.removeAttribute("required");
+    speed.setAttribute("required", "");
+    distance.setAttribute("required", ""); 
 })
 
 buttonSpeed.button1.addEventListener("click", () => {
@@ -140,4 +150,7 @@ buttonSpeed.button1.addEventListener("click", () => {
     calculateButton.addEventListener("click", speedCalc);
     calculateButton.removeEventListener("click", durationCalc);
     calculateButton.removeEventListener("click", distanceCalc);
+    minutes.setAttribute("required", "");
+    speed.removeAttribute("required");
+    distance.setAttribute("required", ""); 
 })
