@@ -335,6 +335,9 @@ footer {
   text-align: center;
   font-size: 4vw;
   user-select: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 footer p {
@@ -343,7 +346,7 @@ footer p {
 }
 
 
-@media(min-width: 992px) {
+@media(min-width: 768px) {
 
   /* navbar */
 
